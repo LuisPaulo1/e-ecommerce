@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  e-commerce-api:
+    image: csluispaulo/e-ecommerce-api
+    container_name: e-commerce-api
+    restart: always
+    environment:
+      DB_HOST: db-mysql
+    ports:
+      - "8080:8080"
+    networks:
+      - ecommerce-network
+    depends_on:
+      - db-mysql
+
+  db-mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: "root"
+    ports:
+      - "3306:3306"
+    networks:
+      - ecommerce-network
+
+networks:
+  ecommerce-network:
+    driver: bridge

@@ -19,7 +19,7 @@ public interface MarcaControllerOpenAPI {
     @ApiOperation("Lista as marcas inativas")
     ResponseEntity<List<MarcaDTO>> findAllInactive();
 
-    @ApiOperation("Busca uma marca por Id")
+    @ApiOperation("Busca uma marca por Id (ativa ou inativa)")
     @ApiResponses({
             @ApiResponse(code = 404, message = "Marca não encontrada", response = StandardError.class)
     })

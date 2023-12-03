@@ -16,7 +16,7 @@ public interface CategoriaControllerOpenAPI {
     @ApiOperation("Lista as categorias inativas")
     ResponseEntity<List<CategoriaDTO>> findAllInactive();
 
-    @ApiOperation("Busca uma categoria por Id")
+    @ApiOperation("Busca uma categoria por Id (ativa ou inativa)")
     @ApiResponses({
             @ApiResponse(code = 404, message = "Categoria não encontrada", response = StandardError.class)
     })

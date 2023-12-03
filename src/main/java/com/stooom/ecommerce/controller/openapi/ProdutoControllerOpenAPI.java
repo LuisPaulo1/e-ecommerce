@@ -27,7 +27,7 @@ public interface ProdutoControllerOpenAPI {
     @ApiOperation("Lista os produtos por categoria")
     ResponseEntity<List<ProdutoResumoDTO>> findAllByCategoria(Integer categoriaId);
 
-    @ApiOperation("Busca um produto por Id")
+    @ApiOperation("Busca um produto por Id (ativo ou inativo)")
     @ApiResponses({
             @ApiResponse(code = 404, message = "Produto não encontrado", response = StandardError.class)
     })
