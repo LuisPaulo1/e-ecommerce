@@ -19,6 +19,7 @@ http://localhost:8080/swagger-ui/index.html
 - Lombok
 - ModelMapper
 - Maven
+- Flyway
 - Mysql
 - H2
 - Swagger OpenAPI 3.0

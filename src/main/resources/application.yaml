@@ -3,11 +3,9 @@ spring:
     url: jdbc:mysql://${DB_HOST:localhost:3306}/loja?createDatabaseIfNotExist=true
     username: root
     password: root
+
   jpa:
-    show-sql: false
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        format_sql: true
     open-in-view: false
+
+  flyway:
+    locations: classpath:db/migration,classpath:db/testdata

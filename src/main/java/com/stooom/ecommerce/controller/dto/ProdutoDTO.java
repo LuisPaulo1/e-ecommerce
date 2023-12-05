@@ -2,14 +2,12 @@ package com.stooom.ecommerce.controller.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@Getter
-@Setter
+@Data
 public class ProdutoDTO {
 
     @ApiModelProperty(example = "1")

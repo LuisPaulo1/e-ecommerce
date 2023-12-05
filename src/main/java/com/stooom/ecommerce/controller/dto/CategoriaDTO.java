@@ -1,11 +1,9 @@
 package com.stooom.ecommerce.controller.dto;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+@Data
 public class CategoriaDTO {
 
     @ApiModelProperty(example = "1")
