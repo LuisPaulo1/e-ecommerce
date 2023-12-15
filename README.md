@@ -46,10 +46,7 @@ git clone https://github.com/LuisPaulo1/e-ecommerce.git
 cd e-ecommerce
 
 # Executar o projeto
-docker-compose up -d (Aguardar 25s para iniciar a API e o banco)
-
-# Encerrar o projeto
- docker-compose down
+docker-compose up
 ```
 ### Utilizando IDE ou linha de comando
 ### Pré-requisitos

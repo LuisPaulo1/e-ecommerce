@@ -12,13 +12,20 @@ services:
     networks:
       - ecommerce-network
     depends_on:
-      - db-mysql
+      db-mysql:
+        condition: service_healthy
 
   db-mysql:
     image: mysql:8.0
+    container_name: db-mysql
     restart: always
     environment:
-        MYSQL_ROOT_PASSWORD: "root"
+        MYSQL_ROOT_PASSWORD: root
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p$$MYSQL_ROOT_PASSWORD"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
     ports:
       - "3306:3306"
     networks:
